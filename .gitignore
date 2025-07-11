@@ -1,0 +1,16 @@
+objs/
+libft/obj/
+libft/libft.a
+push_swap
+push_swap.txt
+test.txt
+test2.txt
+.save/
+.vscode/
+push_swap_visualizer/
+push_swap_tester/
+checker
+checker_linux
+checker_Mac
+fr.push_swap.pdf
+imgui.ini
