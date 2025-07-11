@@ -6,7 +6,7 @@
 /*   By: mzimeris <mzimeris@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/08 14:32:51 by mzimeris          #+#    #+#             */
-/*   Updated: 2025/07/10 11:26:36 by mzimeris         ###   ########.fr       */
+/*   Updated: 2025/07/11 10:35:24 by mzimeris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,8 @@ int	check_input(char *argv[])
 	i = 1;
 	while (argv[i])
 	{
+		if (argv[i][0] == '\0')
+			return (0);
 		if (!is_number(argv[i]))
 			return (0);
 		nb_zeros += zero(argv[i]);

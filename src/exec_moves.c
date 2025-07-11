@@ -6,7 +6,7 @@
 /*   By: mzimeris <mzimeris@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/27 16:01:05 by mzimeris          #+#    #+#             */
-/*   Updated: 2025/07/08 12:11:47 by mzimeris         ###   ########.fr       */
+/*   Updated: 2025/07/11 10:37:56 by mzimeris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ void	push_back_to_a_optimized(t_swap *swap)
 		if (!cheapest_cost)
 			return ;
 		execute_optimal_moves(swap, cheapest_cost);
-		free_cost_if_not_null(&cheapest_cost);
+		free_cost(&cheapest_cost);
 	}
-	free_cost_if_not_null(&cheapest_cost);
+	free_cost(&cheapest_cost);
 }

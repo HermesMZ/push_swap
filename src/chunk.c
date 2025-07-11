@@ -6,7 +6,7 @@
 /*   By: mzimeris <mzimeris@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/01 20:09:45 by zoum              #+#    #+#             */
-/*   Updated: 2025/07/10 11:41:34 by mzimeris         ###   ########.fr       */
+/*   Updated: 2025/07/11 10:37:56 by mzimeris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static void	push_one_chunk(t_swap *swap, int chunk_min, int chunk_max)
 		execute_optimal_moves(swap, cheapest_cost);
 		if (swap->stack_b->first->index > pivot)
 			ft_rotate(swap, swap->stack_b->first);
-		free_cost_if_not_null(&cheapest_cost);
+		free_cost(&cheapest_cost);
 	}
 }
 

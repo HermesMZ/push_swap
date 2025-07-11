@@ -6,7 +6,7 @@
 /*   By: mzimeris <mzimeris@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/14 15:08:42 by zoum              #+#    #+#             */
-/*   Updated: 2025/07/10 11:18:34 by mzimeris         ###   ########.fr       */
+/*   Updated: 2025/07/11 10:36:33 by mzimeris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,7 @@ static void	ft_del_swapint(t_swap_int *p_elem)
 	if (!p_elem)
 		return ;
 	free(p_elem);
+	p_elem = NULL;
 }
 
 static void	ft_stack_clear(t_stack **p_lst, void (*del)(void*))

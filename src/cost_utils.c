@@ -6,13 +6,13 @@
 /*   By: mzimeris <mzimeris@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/02 15:55:44 by zoum              #+#    #+#             */
-/*   Updated: 2025/07/10 11:39:51 by mzimeris         ###   ########.fr       */
+/*   Updated: 2025/07/11 10:37:56 by mzimeris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	free_cost_if_not_null(t_cost **cost)
+void	free_cost(t_cost **cost)
 {
 	if (*cost)
 	{

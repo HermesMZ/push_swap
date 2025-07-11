@@ -6,7 +6,7 @@
 /*   By: mzimeris <mzimeris@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/14 01:22:10 by zoum              #+#    #+#             */
-/*   Updated: 2025/07/10 11:52:04 by mzimeris         ###   ########.fr       */
+/*   Updated: 2025/07/11 10:37:56 by mzimeris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,7 +95,7 @@ t_swap_int	*get_target(t_swap *swap, t_swap_int *source);
 
 // cost_utils
 t_cost		*init_empty_cost(void);
-void		free_cost_if_not_null(t_cost **cost);
+void		free_cost(t_cost **cost);
 
 // exec_moves
 void		execute_optimal_moves(t_swap *swap, t_cost *cost);

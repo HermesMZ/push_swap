@@ -6,7 +6,7 @@
 /*   By: mzimeris <mzimeris@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/11 17:38:07 by mzimeris          #+#    #+#             */
-/*   Updated: 2025/07/10 11:26:33 by mzimeris         ###   ########.fr       */
+/*   Updated: 2025/07/11 10:29:38 by mzimeris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,16 +43,21 @@ static void	sort(t_swap *swap)
 	t_swap_int	*pivot;
 
 	pivot = find_median(swap->stack_a->first, swap->stack_a->len);
-	while (swap->stack_a->len > 3)
+	if (swap->stack_a->len <= 3)
+		hard_sort(swap, swap->stack_a->first, swap->stack_a->len);
+	else
 	{
-		if (swap->stack_a->first->index == swap->max)
-			ft_rotate(swap, swap->stack_a->first);
-		ft_push(swap, swap->stack_a->first);
-		if (swap->stack_b->first->index > pivot->index)
-			ft_rotate(swap, swap->stack_b->first);
+		while (swap->stack_a->len > 3)
+		{
+			if (swap->stack_a->first->index == swap->max)
+				ft_rotate(swap, swap->stack_a->first);
+			ft_push(swap, swap->stack_a->first);
+			if (swap->stack_b->first->index > pivot->index)
+				ft_rotate(swap, swap->stack_b->first);
+		}
+		hard_sort(swap, swap->stack_a->first, swap->stack_a->len);
+		push_back_to_a_optimized(swap);
 	}
-	hard_sort(swap, swap->stack_a->first, swap->stack_a->len);
-	push_back_to_a_optimized(swap);
 }
 
 int	main(int argc, char *argv[])
