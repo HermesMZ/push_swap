@@ -6,9 +6,12 @@
 /*   By: mzimeris <mzimeris@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/08 21:11:52 by zoum              #+#    #+#             */
-/*   Updated: 2025/07/10 11:56:37 by mzimeris         ###   ########.fr       */
+/*   Updated: 2025/07/11 10:46:39 by mzimeris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+// Use ./bash to use the checker so that args are splitted.
+// I did not change zsh settings nor implement a split logic.
 
 #ifndef CHECKER_H
 # define CHECKER_H

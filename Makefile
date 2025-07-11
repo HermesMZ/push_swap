@@ -52,7 +52,7 @@ OBJS_CHECKER = $(SRCS_CHECKER_PATH:$(SRCS_DIR)/%.c=$(OBJS_DIR)/%.o)
 
 INCLUDES = -I $(INCLUDES_DIR) -I $(LIBFT_DIR)/includes
 
-all: $(LIBFT) $(NAME)
+all: $(LIBFT) $(NAME) checker
 
 $(NAME): $(OBJS) $(LIBFT)
 	$(CC) $(CFLAGS) $(OBJS) $(LIBFT) -o $(NAME)
