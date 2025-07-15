@@ -6,7 +6,7 @@
 /*   By: mzimeris <mzimeris@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/08 14:32:51 by mzimeris          #+#    #+#             */
-/*   Updated: 2025/07/15 18:52:23 by mzimeris         ###   ########.fr       */
+/*   Updated: 2025/07/15 19:08:13 by mzimeris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,8 @@ static int	has_double(char *argv[])
 	while (argv[i])
 	{
 		if (ft_atoi(argv[i]) != ft_atol(argv[i]))
+			return (1);
+		if (!argv[i][0])
 			return (1);
 		val_i = ft_atoi(argv[i]);
 		j = i + 1;
