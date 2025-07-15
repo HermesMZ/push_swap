@@ -6,31 +6,20 @@
 /*   By: mzimeris <mzimeris@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/19 01:15:54 by zoum              #+#    #+#             */
-/*   Updated: 2025/06/28 02:11:23 by mzimeris         ###   ########.fr       */
+/*   Updated: 2025/07/15 19:39:31 by mzimeris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static void	hard_sort_3(t_swap *swap, t_swap_int *elem, int ascending)
+static void	hard_sort_3(t_swap *swap)
 {
-	if ((ascending && elem->index > elem->next->index)
-		|| (!ascending && elem->index < elem->next->index))
-	{
-		ft_swap(swap, elem);
-		elem = elem->stack->first;
-	}
-	if ((ascending && elem->next->index > elem->next->next->index)
-		|| (!ascending && elem->next->index < elem->next->next->index))
-	{
-		ft_rotate(swap, elem);
-		ft_swap(swap, elem);
-		ft_reverse_rotate(swap, elem);
-		elem = elem->stack->first;
-	}
-	if ((ascending && elem->index > elem->next->index)
-		|| (!ascending && elem->index < elem->next->index))
-		ft_swap(swap, elem);
+	t_swap_int	*elem;
+
+	elem = swap->stack_a->first;
+	if (is_circularly_sorted(swap->stack_a) != 1)
+		ft_swap(swap, swap->stack_a->first);
+	rotate_to(swap, find_index(swap->stack_a, swap->stack_a->min));
 }
 
 void	hard_sort(t_swap *swap, t_swap_int *elem, int count)
@@ -46,10 +35,9 @@ void	hard_sort(t_swap *swap, t_swap_int *elem, int count)
 		to = swap->stack_a->first;
 	if (count == 2)
 	{
-		if ((to->index > to->next->index && to->stack == swap->stack_a)
-			|| (to->index < to->next->index && to->stack == swap->stack_b))
+		if (to->index > to->next->index && to->stack == swap->stack_a)
 			ft_swap(swap, to);
 	}
 	if (count == 3)
-		hard_sort_3(swap, elem, elem->stack == swap->stack_a);
+		hard_sort_3(swap);
 }
