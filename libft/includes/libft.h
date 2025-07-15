@@ -6,7 +6,7 @@
 /*   By: mzimeris <mzimeris@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 14:07:41 by mzimeris          #+#    #+#             */
-/*   Updated: 2025/06/11 18:20:57 by mzimeris         ###   ########.fr       */
+/*   Updated: 2025/07/15 18:49:29 by mzimeris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,7 @@ void		*ft_realloc(void *ptr, size_t size);
 
 // num
 int			ft_atoi(const char *str);
+long		ft_atol(const char *str);
 char		*ft_itoa(int n);
 char		*ft_itoa_ll(long long n);
 char		*ft_ptoa(unsigned long long ptr);

@@ -6,7 +6,7 @@
 /*   By: mzimeris <mzimeris@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/11 17:38:07 by mzimeris          #+#    #+#             */
-/*   Updated: 2025/07/11 10:29:38 by mzimeris         ###   ########.fr       */
+/*   Updated: 2025/07/15 18:27:44 by mzimeris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,6 +84,7 @@ int	main(int argc, char *argv[])
 	}
 	rotate_to(swap, find_index(swap->stack_a, swap->stack_a->min));
 	print_moves(swap->move);
+	debug_print_stacks(swap);
 	free_all(swap);
 	return (0);
 }
