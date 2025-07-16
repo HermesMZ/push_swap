@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mzimeris <mzimeris@student.42.fr>          +#+  +:+       +#+        */
+/*   By: zoum <zoum@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/14 01:22:10 by zoum              #+#    #+#             */
-/*   Updated: 2025/07/11 10:37:56 by mzimeris         ###   ########.fr       */
+/*   Updated: 2025/07/16 16:53:30 by zoum             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ t_swap_int	*find_next_chunk_elem(t_swap_int *current, int chunk_min,
 				int chunk_max);
 
 // hard_sort
-void		hard_sort(t_swap *swap, t_swap_int *elem, int count);
+void		hard_sort(t_swap *swap);
 
 // min_max
 void		set_min_max(t_stack *stack);

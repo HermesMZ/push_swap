@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mzimeris <mzimeris@student.42.fr>          +#+  +:+       +#+        */
+/*   By: zoum <zoum@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/11 17:38:07 by mzimeris          #+#    #+#             */
-/*   Updated: 2025/07/15 18:27:44 by mzimeris         ###   ########.fr       */
+/*   Updated: 2025/07/16 17:00:44 by zoum             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ static void	sort(t_swap *swap)
 
 	pivot = find_median(swap->stack_a->first, swap->stack_a->len);
 	if (swap->stack_a->len <= 3)
-		hard_sort(swap, swap->stack_a->first, swap->stack_a->len);
+		hard_sort(swap);
 	else
 	{
 		while (swap->stack_a->len > 3)
@@ -55,7 +55,7 @@ static void	sort(t_swap *swap)
 			if (swap->stack_b->first->index > pivot->index)
 				ft_rotate(swap, swap->stack_b->first);
 		}
-		hard_sort(swap, swap->stack_a->first, swap->stack_a->len);
+		hard_sort(swap);
 		push_back_to_a_optimized(swap);
 	}
 }
@@ -84,7 +84,6 @@ int	main(int argc, char *argv[])
 	}
 	rotate_to(swap, find_index(swap->stack_a, swap->stack_a->min));
 	print_moves(swap->move);
-	debug_print_stacks(swap);
 	free_all(swap);
 	return (0);
 }
