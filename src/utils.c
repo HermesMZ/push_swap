@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mzimeris <mzimeris@student.42.fr>          +#+  +:+       +#+        */
+/*   By: zoum <zoum@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/14 15:08:42 by zoum              #+#    #+#             */
-/*   Updated: 2025/07/11 10:36:33 by mzimeris         ###   ########.fr       */
+/*   Updated: 2025/07/16 17:58:43 by zoum             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,9 +50,12 @@ void	debug_print_stacks(t_swap *swap)
 	stack_b = swap->stack_b;
 	a = stack_a->first;
 	b = stack_b->first;
-	ft_printf("\n%10c %10c\n%10d %10d\n\n", 'a', 'b', stack_a->len, stack_b->len);
-	ft_printf("min-a %4d min-b %4d\n", swap->stack_a->min, swap->stack_b->min);
-	ft_printf("max-a %4d max-b %4d\n\n", swap->stack_a->max, swap->stack_b->max);
+	ft_printf("\n%10c %10c\n%10d %10d\n\n", 'a', 'b',
+		stack_a->len, stack_b->len);
+	ft_printf("min-a %4d min-b %4d\n", swap->stack_a->min,
+		swap->stack_b->min);
+	ft_printf("max-a %4d max-b %4d\n\n", swap->stack_a->max,
+		swap->stack_b->max);
 	i = 0;
 	while (i < stack_a->len || i < stack_b->len)
 	{

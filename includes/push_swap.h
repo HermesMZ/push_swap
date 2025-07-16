@@ -6,7 +6,7 @@
 /*   By: zoum <zoum@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/14 01:22:10 by zoum              #+#    #+#             */
-/*   Updated: 2025/07/16 16:53:30 by zoum             ###   ########.fr       */
+/*   Updated: 2025/07/16 17:57:36 by zoum             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,6 @@ int			error(void);
 void		fill_index(t_stack *stack);
 t_swap_int	*find_index(t_stack *stack, int i);
 t_swap_int	*find_median(t_swap_int *first, int count);
-
 
 // sort_utils
 int			is_sorted(size_t length, t_swap_int *elem);

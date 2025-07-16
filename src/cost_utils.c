@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cost_utils.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mzimeris <mzimeris@student.42.fr>          +#+  +:+       +#+        */
+/*   By: zoum <zoum@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/02 15:55:44 by zoum              #+#    #+#             */
-/*   Updated: 2025/07/11 10:37:56 by mzimeris         ###   ########.fr       */
+/*   Updated: 2025/07/16 17:57:50 by zoum             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,3 @@ t_cost	*init_empty_cost(void)
 	cost->elem = NULL;
 	return (cost);
 }
-
-
-
-
